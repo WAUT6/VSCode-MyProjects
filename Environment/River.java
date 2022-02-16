@@ -1,19 +1,23 @@
 package Environment;
 
 import Environment.Animals.Abilities;
+import Environment.Animals.Animals;
+import Environment.Animals.Bear;
+import Environment.Animals.Fish;
+
 import java.util.*;
 
 public class River {
 
   public static void main(String[] args) {
     //Technique that will be used to randomly fill the river
-    Object[] animals = new Object[3];
-    animals[0] = new String("Bear");
-    animals[1] = new String("Fish");
+    Animals[] animals = new Animals[3];
+    animals[0] = new Bear();
+    animals[1] = new Fish();
     animals[2] = null;
 
     //The river
-    ArrayList<Object> river = new ArrayList<Object>(10);
+    ArrayList<Animals> river = new ArrayList<Animals>(10);
     System.out.println(river.size());
 
     //Filling the river
@@ -21,7 +25,7 @@ public class River {
       for (int j = 0; j < 1; j++) {
         int generator = (int) Math.floor(Math.random() * 3);
         System.out.println(generator);
-        river.add((Object) animals[generator]);
+        river.add(animals[generator]);
       }
     }
     System.out.println(river.toString());

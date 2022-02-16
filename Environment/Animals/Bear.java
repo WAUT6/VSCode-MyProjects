@@ -1,15 +1,12 @@
 package Environment.Animals;
 
-public class Bear {
+public class Bear extends Animals {
 
-  private String type;
+  
 
   //Constructor
   public void Bear() {
-    this.type = "Bear";
+
   }
 
-  public String getType() {
-    return this.type;
-  }
 }
