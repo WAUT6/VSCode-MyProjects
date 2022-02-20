@@ -1,10 +1,10 @@
 package Environment;
 
 import Environment.Animals.Abilities;
+import Environment.Animals.AbilitiesV2;
 import Environment.Animals.Animals;
 import Environment.Animals.Bear;
 import Environment.Animals.Fish;
-
 import java.util.*;
 
 public class River {
@@ -44,16 +44,16 @@ public class River {
 
       for (int j = 0; j < river.size(); j++) {
         //Choosing a random action
-        if (river.get(j) != null && j + 1 < river.size()) {
+        if (river.get(j) != null && j < river.size()) {
           if (stateOfAnimals.equals("Moving")) {
-            Abilities.move(river, j);
+            AbilitiesV2.move(river, j);
           } else {
-            Abilities.sleep();
+            AbilitiesV2.sleep();
           }
         } else {
           continue;
         }
-        System.out.println(river.toString());
+        // System.out.println(river.toString());
       }
       System.out.println(river.toString());
       System.out.println(timer);
